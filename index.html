@@ -346,7 +346,6 @@ images = [
  'Images/Gnea-Eats-Pie-2.JPG',
  'Images/Gnea-Eats-Pie-3.JPG',
  'Images/Gnea-Eats-Pie-4.JPG',
- 'Images/Going-Home-1.JPG',
  'Images/Going-Home-2.JPG',
  'Images/Golden-Lady-1.JPG',
  'Images/Goofy-Half-Smile-1.JPG',
@@ -354,7 +353,6 @@ images = [
  'Images/Goofy-Half-Smile-3.JPG',
  'Images/Goofy-Half-Smile-4.JPG',
  'Images/Got-The-Feeling-1.JPG',
- 'Images/Got-The-Feeling-2.JPG',
  'Images/Great-Space-Coaster-1.JPG',
  'Images/Great-Space-Coaster-2.JPG',
  'Images/Great-Space-Coaster-3.JPG',
@@ -465,7 +463,6 @@ images = [
  'Images/Left-Wing-Fascist-5.JPG',
  'Images/Left-Wing-Fascist-7.JPG',
  'Images/Left-Wing-Fascist-9.JPG',
- 'Images/Let-Me-Get-2.JPG',
  'Images/Lick-The-Faucet-1.JPG',
  'Images/Life-After-Death-1.JPG',
  'Images/Life-After-Death-10.JPG',
@@ -764,7 +761,6 @@ images = [
  'Images/Siberian-Khartu-4.JPG',
  'Images/Siberian-Khartu-5.JPG',
  'Images/Siberian-Khartu-6.JPG',
- 'Images/Sing-Softly-1.JPG',
  'Images/Sister-Bluebird-1.JPG',
  'Images/Six-Figure-Unit-1.JPG',
  'Images/Six-Figure-Unit-2.JPG',
@@ -1001,15 +997,16 @@ body {
     <script>
         for (i of images) {
             const ii = i;
-            let a = document.createElement('a');
+            let a = document.createElement('a'); 
+            let d = document.createElement('div');
+
             a.innerText = i;
             a.onclick = (e) => {
                 document.body.style.background = 'url(' + ii + ')';
+                d.style.background = 'url(' + ii + ')';
                 e.preventDefault();
             }
             a.href = '#';
-            let d = document.createElement('div');
-            // d.style.background = 'url(' + ii + ')';
             a.style.color = '#ffffff';
             d.style.width = '256px';
             d.style.padding = '5px';
